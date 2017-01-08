@@ -9,7 +9,7 @@ var http = require('http').Server(app);
 var path = require('path');
 var port = process.env.PORT || 8080;
 
-
+app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(req, res) {
 
@@ -38,9 +38,11 @@ app.get('/', function(req, res) {
     res.send(responseObject);
 });
 
-app.listen(8080, function () {
-    console.log("Listening on port 8080")
+//app.listen(8080, function () {
+//    console.log("Listening on port 8080")
+//});
+
+app.listen(app.get('port'), function() {  // code from fcc post https://forum.freecodecamp.com/t/solved-need-heroku-help-have-read-other-threads-git-to-heroku-not-working/46737/2
+  console.log('Node app is running on port', app.get('port'));
 });
-
-
 
