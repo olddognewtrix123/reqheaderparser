@@ -16,6 +16,7 @@
     "express": "^4.14.0",
     "express-useragent": "^1.0.4",
     "forwarded-for": "^1.0.1",
-    "parse-accept-language": "^1.0.1"
+    "parse-accept-language": "^1.0.1",
+    "express-handlebars": "^3.0.0"
   }
 }
